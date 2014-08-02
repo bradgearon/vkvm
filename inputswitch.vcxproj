@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -76,17 +77,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Display.cpp" />
-    <ClCompile Include="DisplayManager.cpp" />
-    <ClCompile Include="WindowsMonitorProvider.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Display.cpp" />
+    <ClCompile Include="src\DisplayManager.cpp" />
+    <ClCompile Include="src\WindowsMonitorProvider.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common.h" />
-    <ClInclude Include="Display.h" />
-    <ClInclude Include="DisplayManager.h" />
-    <ClInclude Include="IMonitorProvider.h" />
-    <ClInclude Include="WindowsMonitorProvider.h" />
+    <ClInclude Include="include\Common.h" />
+    <ClInclude Include="include\Display.h" />
+    <ClInclude Include="include\DisplayManager.h" />
+    <ClInclude Include="include\IMonitorProvider.h" />
+    <ClInclude Include="include\WindowsMonitorProvider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
